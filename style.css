@@ -20,11 +20,17 @@ nav {
 }
 
 nav a {
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   color: #004080;
   font-weight: bold;
 }
+
+nav i {
+  margin-right: 5px;
+  color: #004080;
+}
+
 
 section {
   padding: 20px;
