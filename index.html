@@ -11,6 +11,26 @@
   <meta property="og:description" content="Learn Business Central with AI-friendly structured content.">
   <meta property="og:url" content="https://postsaurav.github.io">
   <meta property="og:type" content="website">
+  <section>
+    <h2>Search</h2>
+    <input type="text" id="searchBox" placeholder="Search FAQs..." onkeyup="searchContent()">
+    <ul id="faqList">
+      <li>What is Dynamics 365 Business Central?</li>
+      <li>How do I upgrade Business Central?</li>
+    </ul>
+  </section>
+  
+  <script>
+  function searchContent() {
+    let input = document.getElementById('searchBox').value.toLowerCase();
+    let items = document.getElementById('faqList').getElementsByTagName('li');
+    for (let i = 0; i < items.length; i++) {
+      let text = items[i].textContent.toLowerCase();
+      items[i].style.display = text.includes(input) ? "" : "none";
+    }
+  }
+  </script>
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
